@@ -25,5 +25,5 @@ assume that your function returns 0 when the reversed integer overflows. */
  * @return {number}
  */
 var reverse = function(x) {
-    
+    const negative = true ? x < 0 : false;
 };
