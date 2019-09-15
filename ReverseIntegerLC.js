@@ -25,5 +25,15 @@ assume that your function returns 0 when the reversed integer overflows. */
  * @return {number}
  */
 var reverse = function(x) {
-    const negative = true ? x < 0 : false;
+    const neg = (x < 0 && "-");
+
+    const array = Array.from(x.toString()).map(Number);
+    
+    const num = parseInt(array.reverse().join(""));
+
+    if (num > 2147483647) {
+        return 0;
+    }
+
+    return parseInt(neg + num);
 };
